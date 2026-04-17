@@ -23,6 +23,17 @@ if (prefersRtl) {
 darkToggles.forEach((toggle) => toggle.classList.toggle("active", prefersDark));
 rtlToggles.forEach((toggle) => toggle.classList.toggle("active", prefersRtl));
 
+function runApplyRTL() {
+    if (!document.body) return;
+    if (typeof applyRTL === "function") applyRTL();
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", runApplyRTL);
+} else {
+    runApplyRTL();
+}
+
 darkToggles.forEach((button) => {
     button.addEventListener("click", () => {
         const isEnabled = document.body.classList.toggle("dark-mode");
@@ -36,6 +47,7 @@ rtlToggles.forEach((button) => {
         const isEnabled = document.body.classList.toggle("rtl");
         preferenceStorage?.setItem("sandice-rtl", isEnabled ? "1" : "0");
         rtlToggles.forEach((toggle) => toggle.classList.toggle("active", isEnabled));
+        runApplyRTL();
     });
 });
 
@@ -257,22 +269,24 @@ passwordToggles.forEach((toggle) => {
 
 const scrollBtn = document.getElementById("scrollTopBtn");
 
-/* SHOW / HIDE */
-window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-        scrollBtn.classList.add("show");
-    } else {
-        scrollBtn.classList.remove("show");
-    }
-});
-
-/* SCROLL TO TOP */
-scrollBtn.addEventListener("click", () => {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
+if (scrollBtn) {
+    /* SHOW / HIDE */
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+            scrollBtn.classList.add("show");
+        } else {
+            scrollBtn.classList.remove("show");
+        }
     });
-});
+
+    /* SCROLL TO TOP */
+    scrollBtn.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+    });
+}
 
 
 /////////preloader 
@@ -280,9 +294,11 @@ scrollBtn.addEventListener("click", () => {
 window.addEventListener("load", () => {
     const preloader = document.getElementById("preloader");
 
-    setTimeout(() => {
-        preloader.classList.add("hide");
-    }, 800); // small delay for smooth UX
+    if (preloader) {
+        setTimeout(() => {
+            preloader.classList.add("hide");
+        }, 800); // small delay for smooth UX
+    }
 });
 
 
@@ -320,3 +336,53 @@ const activeFilterButton = document.querySelector(".filter-btn.active");
 if (activeFilterButton && cards.length) {
     applyServiceFilter(activeFilterButton.getAttribute("data-filter"));
 }
+
+
+
+//////////rtl mode
+
+// Reverse only text nodes (SAFE)
+function reverseTextNodes(element) {
+
+    if (!element.dataset.original) {
+        element.dataset.original = element.innerHTML; // store full HTML safely
+    }
+
+    if (document.body.classList.contains("rtl")) {
+
+        element.childNodes.forEach(node => {
+            if (node.nodeType === 3) { // TEXT NODE ONLY
+                const text = node.textContent.trim();
+                if (text.length > 0) {
+                    node.textContent = text.split(" ").reverse().join(" ");
+                }
+            }
+        });
+
+    } else {
+        element.innerHTML = element.dataset.original; // restore safely
+    }
+}
+
+
+// Apply only to safe elements (IMPORTANT 🔥)
+function applyRTL() {
+    document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, li").forEach(el => {
+        reverseTextNodes(el);
+    });
+}
+
+
+// BUTTON
+const rtlBtn = document.getElementById("rtlToggle");
+
+rtlBtn?.addEventListener("click", () => {
+    document.body.classList.toggle("rtl");
+    applyRTL();
+});
+
+
+// LOAD
+window.addEventListener("DOMContentLoaded", () => {
+    applyRTL();
+});
