@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SandIce Artistry</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="has-navbar">
+
+    <header class="navbar">
+        <div class="container nav-container">
+
+            <div class="logo">
+                <img src="images/logo.png" alt="SandIce Logo">
+            </div>
+            <!-- HAMBURGER -->
+            <div class="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <!-- MENU -->
+            <nav class="menu">
+                <ul>
+
+                    <!-- HOME -->
+                    <li class="dropdown">
+                        <a href="#" class="active">Home <i class="fa-solid fa-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html" class="active">Home 1</a></li>
+                            <li><a href="home2.html">Home 2</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- ABOUT -->
+                    <li><a href="about.html">About Us</a></li>
+
+                    <!-- SERVICES -->
+                    <li class="dropdown">
+                        <a href="#">Services <i class="fa-solid fa-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="sandice.html">Sand & Ice Sculptures</a></li>
+                            <li><a href="event.html">Event Sculptures</a></li>
+                            <li><a href="booking.html">Festival Bookings</a></li>
+                            <li><a href="packages.html">Packages</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- GALLERY -->
+                    <li class="dropdown">
+                        <a href="#">Gallery <i class="fa-solid fa-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="art.html">SandIce Art </a></li>
+                            <li><a href="highlight.html">Event Highlights</a></li>
+                        </ul>
+                    </li>
+
+
+                    <!-- CONTACT -->
+                    <li><a href="contact.html">Contact Us</a></li>
+
+                    <li class="mobile-clone">
+
+                        <!-- TOGGLES (SAME LINE) -->
+                        <div class="mobile-toggles">
+                            <button id="darkToggle" class="toggle-btn">
+                                <i class="fa-solid fa-moon"></i>
+                            </button>
+
+                            <button id="rtlToggle" class="toggle-btn">
+                                <i class="fa-solid fa-right-left"></i>
+                            </button>
+                        </div>
+
+                        <!-- LOGIN BELOW -->
+                        <div class="mobile-login">
+                            <a href="login.html" class="btn btn-primary">Login</a>
+                        </div>
+
+                    </li>
+
+                </ul>
+            </nav>
+
+            <!-- RIGHT SIDE -->
+            <div class="nav-right">
+                <!-- DARK MODE TOGGLE -->
+                <button id="darkToggle" class="toggle-btn">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+                <!-- RTL TOGGLE -->
+                <button id="rtlToggle" class="toggle-btn">
+                    <i class="fa-solid fa-right-left"></i>
+                </button>
+
+                <a href="login.html" class="btn btn-primary">Login</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-slider">
+
+        <!-- SLIDE 1 -->
+        <div class="slide active" style="background-image: url('images/slide1.jpg');">
+            <div class="overlay"></div>
+            <div class="container slide-content">
+                <h1>Creative Sand Sculptures</h1>
+                <p>Transforming sand into stunning works of art.</p>
+                <a href="#" class="btn btn-primary">Explore</a>
+            </div>
+        </div>
+
+        <!-- SLIDE 2 -->
+        <div class="slide" style="background-image: url('images/slide2.jpg');">
+            <div class="overlay"></div>
+            <div class="container slide-content">
+                <h1>Elegant Ice Sculptures</h1>
+                <p>Perfect centerpiece for weddings and events.</p>
+                <a href="#" class="btn btn-primary">View Gallery</a>
+            </div>
+        </div>
+
+        <!-- SLIDE 3 -->
+        <div class="slide" style="background-image: url('images/slide3.jpg');">
+            <div class="overlay"></div>
+            <div class="container slide-content">
+                <h1>Festival & Event Art</h1>
+                <p>Creating unforgettable experiences with sculpture art.</p>
+                <a href="#" class="btn btn-primary">Book Now</a>
+            </div>
+        </div>
+
+        <button class="arrow prev"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="arrow next"><i class="fa-solid fa-chevron-right"></i></button>
+
+    </section>
+
+    <section class="brand-art">
+        <div class="container brand-art-container">
+
+            <!-- IMAGE SIDE -->
+            <div class="brand-art-image">
+                <img src="images/about-art.jpg" alt="Art">
+            </div>
+
+            <!-- TEXT SIDE -->
+            <div class="brand-art-text">
+                <h2>Crafting Art with Sand & Ice</h2>
+
+                <p>
+                    We transform simple elements into extraordinary sculptures that
+                    bring life to events, festivals, and celebrations.
+                </p>
+
+                <p>
+                    From intricate sand castles to elegant ice displays, our artistry
+                    creates unforgettable visual experiences.
+                </p>
+
+                <a href="#" class="btn btn-primary">More Details</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="gallery-section">
+
+        <div class="container">
+
+            <div class="gallery-header">
+                <h2>Work of Art</h2>
+            </div>
+
+            <div class="masonry-gallery">
+
+                <img src="images/sand1.jpg">
+                <img src="images/sand2.jpg">
+                <img src="images/sand3.jpg">
+                <img src="images/sand4.jpg">
+                <img src="images/ice1.jpg">
+                <img src="images/ice2.jpg">
+                <img src="images/ice3.jpg">
+                <img src="images/event1.jpg">
+                <img src="images/event2.jpg">
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="journey-section">
+
+        <div class="container">
+
+            <div class="journey-header">
+                <h2>Our Artistic Journey</h2>
+                <p>From imagination to breathtaking sculptures</p>
+            </div>
+
+            <div class="journey-track">
+
+                <div class="journey-step">
+                    <span>01</span>
+                    <h3>Concept</h3>
+                    <p>Creative ideas and initial sketches begin here.</p>
+                </div>
+
+                <div class="journey-step">
+                    <span>02</span>
+                    <h3>Design</h3>
+                    <p>We structure and plan every artistic detail.</p>
+                </div>
+
+                <div class="journey-step">
+                    <span>03</span>
+                    <h3>Creation</h3>
+                    <p>Transforming sand and ice into real sculptures.</p>
+                </div>
+
+                <div class="journey-step">
+                    <span>04</span>
+                    <h3>Showcase</h3>
+                    <p>Delivering stunning final experiences.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="impact-section">
+
+        <div class="impact-overlay"></div>
+
+        <div class="container">
+            <div class="impact-content">
+
+                <div class="impact-header">
+                    <h2>Our Impact in Numbers</h2>
+                    <p>Creating unforgettable moments through art</p>
+                </div>
+
+                <div class="impact-wrapper">
+
+                    <div class="impact-item">
+                        <h3 class="counter counter-plus" data-target="150">0</h3>
+                        <span>Events</span>
+                    </div>
+
+                    <div class="impact-item">
+                        <h3 class="counter counter-plus" data-target="300">0</h3>
+                        <span>Sculptures</span>
+                    </div>
+
+                    <div class="impact-item">
+                        <h3 class="counter counter-plus" data-target="50">0</h3>
+                        <span>Festivals</span>
+                    </div>
+
+                    <div class="impact-item">
+                        <h3 class="counter counter-plus" data-target="100">0</h3>
+                        <span>Clients</span>
+                    </div>
+
+                    <div class="impact-item">
+                        <h3 class="counter counter-plus" data-target="12">0</h3>
+                        <span>Cities</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <section class="services-section">
+
+        <div class="container">
+
+            <div class="services-header">
+                <h2>Our Creative Services</h2>
+                <p>Bringing sand and ice to life with creativity and precision</p>
+            </div>
+
+            <div class="services-grid">
+
+                <div class="service-card">
+                    <i class="fa-solid fa-chess-rook"></i>
+                    <h3>Sand Sculptures Art</h3>
+                    <p>Intricate sand art crafted for beaches, events, Festivals and exhibitions.</p>
+                </div>
+
+                <div class="service-card">
+                    <i class="fa-solid fa-snowflake"></i>
+                    <h3>Ice Sculptures Art</h3>
+                    <p>Elegant ice designs perfect for weddings, Festivals and luxury events.</p>
+                </div>
+
+                <div class="service-card">
+                    <i class="fa-solid fa-star"></i>
+                    <h3>Event & Festival Art</h3>
+                    <p>Custom sculptures that transform events into memorable experiences.</p>
+                </div>
+
+                <div class="service-card">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    <h3>Festival Installations</h3>
+                    <p>Large-scale artistic installations designed for festivals and crowds.</p>
+                </div>
+
+            </div>
+
+            <div class="services-btn">
+                <a href="#" class="btn btn-primary">View Services</a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="process-section">
+
+        <div class="container">
+
+            <div class="process-header">
+                <h2>How We Bring Art to Life</h2>
+                <p>From idea to masterpiece, every step is crafted with precision</p>
+            </div>
+
+            <div class="process-wrapper">
+
+                <!-- STEP 1 -->
+                <div class="process-item left">
+                    <div class="process-content">
+                        <span>01</span>
+                        <h3>Concept</h3>
+                        <p>We start with creative ideas and understand your vision.</p>
+                    </div>
+                </div>
+
+                <!-- STEP 2 -->
+                <div class="process-item right">
+                    <div class="process-content">
+                        <span>02</span>
+                        <h3>Design</h3>
+                        <p>Detailed planning and sketching for perfect execution.</p>
+                    </div>
+                </div>
+
+                <!-- STEP 3 -->
+                <div class="process-item left">
+                    <div class="process-content">
+                        <span>03</span>
+                        <h3>Creation</h3>
+                        <p>Transforming sand and ice into stunning sculptures.</p>
+                    </div>
+                </div>
+
+                <!-- STEP 4 -->
+                <div class="process-item right">
+                    <div class="process-content">
+                        <span>04</span>
+                        <h3>Delivery</h3>
+                        <p>Final masterpiece delivered to elevate your event.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="testimonial-modern">
+
+        <div class="container">
+
+            <h2 class="testimonial-title">What Clients Says</h2>
+
+            <div class="testimonial-box">
+
+                <!-- IMAGE -->
+                <div class="testimonial-img">
+                    <img src="images/user1.jpg" alt="client">
+                </div>
+
+                <!-- CONTENT -->
+                <div class="testimonial-content">
+
+                    <p class="testimonial-text">
+                        Excellent service from start to finish. The entire process was smooth, and the final result was
+                        simply beautiful. Will definitely book again!
+                    </p>
+
+                    <div class="testimonial-user">
+                        <h4>Olivia Mitchell</h4>
+                        <span>Student</span>
+                    </div>
+
+                    <!-- ARROWS -->
+                    <div class="testimonial-arrows">
+                        <button class="t-prev"><i class="fa-solid fa-arrow-left"></i></button>
+                        <button class="t-next"><i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="cta-section">
+
+        <div class="cta-overlay"></div>
+
+        <div class="container cta-content">
+
+            <h2>Let’s Create Your Next Masterpiece</h2>
+            <p>Book stunning sand & ice sculptures for your events and celebrations.</p>
+
+            <a href="#" class="btn btn-primary">Book Now</a>
+
+        </div>
+
+    </section>
+
+
+
+    <footer class="footer">
+        <div class="container footer-container">
+
+            <!-- LEFT: LOGO + TEXT -->
+            <div class="footer-col">
+                <img src="images/logo.png" alt="logo" class="footer-logo">
+                <p>
+                    Creating stunning sand and ice sculptures for events, festivals, and unforgettable experiences.
+                </p>
+
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+
+            <!-- ABOUT -->
+            <div class="footer-col">
+                <h4>About</h4>
+                <ul>
+                    <li><a href="#"><i class="fa-solid fa-angle-right"></i>About Us</a></li>
+                    <li><a href="#"><i class="fa-solid fa-angle-right"></i>Services</a></li>
+                    <li><a href="#"><i class="fa-solid fa-angle-right"></i>Gallery</a></li>
+                    <li><a href="#"><i class="fa-solid fa-angle-right"></i>Packages</a></li>
+                </ul>
+            </div>
+
+            <!-- CONTACT -->
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li><i class="fa-solid fa-location-dot"></i> Chennai, India</li>
+                    <li><i class="fa-solid fa-envelope"></i> contact@sandice.com</li>
+                    <li><i class="fa-solid fa-phone"></i> +91 98765 43210</li>
+                </ul>
+            </div>
+
+            <!-- CTA -->
+            <div class="footer-col">
+                <h4>Get Started</h4>
+                <p>Book your event with us today.</p>
+                <a href="#" class="btn btn-primary">Book Now</a>
+            </div>
+
+        </div>
+
+        <!-- BOTTOM -->
+        <div class="footer-bottom">
+            <div class="container footer-bottom-container">
+                <p>© 2026 SandIce Artistry. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="scrollTopBtn">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

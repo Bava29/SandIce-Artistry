@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SandIce Artistry</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="has-navbar">
+
+    <header class="navbar">
+        <div class="container nav-container">
+
+            <div class="logo">
+                <img src="images/logo.png" alt="SandIce Logo">
+            </div>
+            <!-- HAMBURGER -->
+            <div class="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <!-- MENU -->
+            <nav class="menu">
+                <ul>
+
+                    <!-- HOME -->
+                    <li class="dropdown">
+                        <a href="#">Home <i class="fa-solid fa-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html">Home 1</a></li>
+                            <li><a href="home2.html">Home 2</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- ABOUT -->
+                    <li><a href="about.html">About Us</a></li>
+
+                    <!-- SERVICES -->
+                    <li class="dropdown">
+                        <a href="#" class="active">Services <i class="fa-solid fa-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="sandice.html">Sand & Ice Sculptures</a></li>
+                            <li><a href="event.html" class="active">Event Sculptures</a></li>
+                            <li><a href="booking.html">Festival Bookings</a></li>
+                            <li><a href="packages.html">Packages</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- GALLERY -->
+                    <li class="dropdown">
+                        <a href="#">Gallery <i class="fa-solid fa-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="art.html">SandIce Art </a></li>
+                            <li><a href="highlight.html">Event Highlights</a></li>
+                        </ul>
+                    </li>
+
+
+                    <!-- CONTACT -->
+                    <li><a href="contact.html">Contact Us</a></li>
+
+                    <li class="mobile-clone">
+
+                        <!-- TOGGLES (SAME LINE) -->
+                        <div class="mobile-toggles">
+                            <button id="darkToggle" class="toggle-btn">
+                                <i class="fa-solid fa-moon"></i>
+                            </button>
+
+                            <button id="rtlToggle" class="toggle-btn">
+                                <i class="fa-solid fa-right-left"></i>
+                            </button>
+                        </div>
+
+                        <!-- LOGIN BELOW -->
+                        <div class="mobile-login">
+                            <a href="login.html" class="btn btn-primary">Login</a>
+                        </div>
+
+                    </li>
+
+                </ul>
+            </nav>
+
+            <!-- RIGHT SIDE -->
+            <div class="nav-right">
+                <!-- DARK MODE TOGGLE -->
+                <button id="darkToggle" class="toggle-btn">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+                <!-- RTL TOGGLE -->
+                <button id="rtlToggle" class="toggle-btn">
+                    <i class="fa-solid fa-right-left"></i>
+                </button>
+
+                <a href="login.html" class="btn btn-primary">Login</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="contact-hero">
+
+        <div class="hero-overlay"></div>
+
+        <div class="container hero-content">
+            <h1>Transforming Events into Living Art</h1>
+            <p>
+                We design stunning sculptures that elevate events, bringing creativity and elegance to every moment.
+            </p>
+        </div>
+
+    </section>
+
+
+    <section class="event-intro-premium">
+
+        <div class="container event-intro-container">
+
+            <!-- LEFT CONTENT -->
+            <div class="event-intro-text">
+
+                <h2>
+                    Turning Every Event into a <br>
+                    <span>Visual Experience</span>
+                </h2>
+
+                <p>
+                    We don’t just create sculptures — we design experiences that
+                    capture attention, engage audiences, and elevate the atmosphere
+                    of your event.
+                </p>
+
+                <div class="event-points">
+                    <div><i class="fa-solid fa-star"></i> Eye-catching centerpieces</div>
+                    <div><i class="fa-solid fa-users"></i> Crowd engagement moments</div>
+                    <div><i class="fa-solid fa-camera"></i> Perfect for photos & memories</div>
+                </div>
+
+                <a href="contact.html" class="btn btn-primary">Plan Your Event</a>
+
+            </div>
+
+            <!-- RIGHT IMAGE -->
+            <div class="event-intro-image">
+                <img src="images/event-intro.jpg" alt="event sculpture">
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section class="event-types">
+
+        <div class="container">
+
+            <div class="event-types-header">
+                <h2>Events We Transform</h2>
+                <p>Crafting unique sculptural experiences for every occasion</p>
+            </div>
+
+            <div class="event-types-grid">
+
+                <!-- CARD 1 -->
+                <div class="event-card">
+                    <img src="images/wedding.jpg">
+                    <h3>Weddings</h3>
+                    <p>Elegant ice sculptures that elevate your special day</p>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="event-card">
+                    <img src="images/festival.jpg">
+                    <h3>Festivals</h3>
+                    <p>Grand sand art that captures attention and crowds</p>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="event-card">
+                    <img src="images/corporate.jpg">
+                    <h3>Corporate</h3>
+                    <p>Creative branding through artistic installations</p>
+                </div>
+
+                <!-- CARD 4 -->
+                <div class="event-card">
+                    <img src="images/private.jpg">
+                    <h3>Private Events</h3>
+                    <p>Custom designs tailored for intimate celebrations</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="event-process-text">
+
+        <div class="event-process-header">
+            <h2>How We Bring Your Event to Life</h2>
+            <p>Every step crafted to create a memorable experience</p>
+        </div>
+
+        <div class="event-process-track">
+
+            <div class="event-step-text">
+                <span>01</span>
+                <h3>Understanding</h3>
+                <p>We analyze your event vision, audience, and space.</p>
+            </div>
+
+            <div class="event-step-text">
+                <span>02</span>
+                <h3>Planning</h3>
+                <p>Creative concepts are designed to match your theme.</p>
+            </div>
+
+            <div class="event-step-text">
+                <span>03</span>
+                <h3>Creation</h3>
+                <p>Live sculpting transforms ideas into reality.</p>
+            </div>
+
+            <div class="event-step-text">
+                <span>04</span>
+                <h3>Showcase</h3>
+                <p>The final piece becomes your event’s highlight.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="event-why">
+
+        <div class="container event-why-container">
+
+            <!-- LEFT -->
+            <div class="event-why-text">
+                <h2>Why Choose Our Event Sculptures</h2>
+
+                <p>
+                    We don’t just create sculptures — we design experiences that
+                    elevate your event, engage your audience, and leave a lasting impression.
+                </p>
+
+                <div class="event-why-points">
+
+                    <div class="why-item">
+                        <span>01</span>
+                        <div>
+                            <h3>Custom Designs</h3>
+                            <p>Every sculpture is tailored to your theme and vision.</p>
+                        </div>
+                    </div>
+
+                    <div class="why-item">
+                        <span>02</span>
+                        <div>
+                            <h3>Live Engagement</h3>
+                            <p>Interactive sculpting that captivates your audience.</p>
+                        </div>
+                    </div>
+
+                    <div class="why-item">
+                        <span>03</span>
+                        <div>
+                            <h3>Premium Finish</h3>
+                            <p>High-quality craftsmanship with attention to detail.</p>
+                        </div>
+                    </div>
+
+                    <div class="why-item">
+                        <span>04</span>
+                        <div>
+                            <h3>Event Ready</h3>
+                            <p>Seamless setup and execution for any scale of event.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT IMAGE -->
+            <div class="event-why-image">
+                <img src="images/why-event.jpg" alt="event sculpture">
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="event-impact">
+
+        <div class="event-impact-overlay"></div>
+
+        <div class="container event-impact-content">
+
+            <div class="impact-header">
+                <h2>Our Impact in Events</h2>
+                <p>Creating experiences that leave a lasting impression</p>
+            </div>
+
+            <div class="impact-grid">
+
+                <div class="impact-item">
+                    <h3 class="counter counter-plus" data-target="500">0</h3>
+                    <span>Events Completed</span>
+                </div>
+
+                <div class="impact-item">
+                    <h3 class="counter counter-plus" data-target="10000">0</h3>
+                    <span>Guests Engaged</span>
+                </div>
+
+                <div class="impact-item">
+                    <h3 class="counter counter-plus" data-target="150">0</h3>
+                    <span>Custom Designs</span>
+                </div>
+
+                <div class="impact-item">
+                    <h3 class="counter counter-plus" data-target="50">0</h3>
+                    <span>Corporate Events</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="event-gallery">
+
+        <div class="container">
+
+            <div class="event-gallery-header">
+                <h2>Moments We’ve Crafted</h2>
+                <p>A glimpse into the experiences we’ve brought to life</p>
+            </div>
+
+            <div class="event-gallery-grid">
+
+                <div class="event-gallery-item is-tall">
+                    <img src="images/event1.jpg" alt="Event sculpture highlight 1">
+                </div>
+                <div class="event-gallery-item">
+                    <img src="images/event2.jpg" alt="Event sculpture highlight 2">
+                </div>
+                <div class="event-gallery-item">
+                    <img src="images/event3.jpg" alt="Event sculpture highlight 3">
+                </div>
+                <div class="event-gallery-item">
+                    <img src="images/event4.jpg" alt="Event sculpture highlight 4">
+                </div>
+                <div class="event-gallery-item">
+                    <img src="images/event5.jpg" alt="Event sculpture highlight 5">
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="event-cta">
+
+        <div class="event-cta-overlay"></div>
+
+        <div class="container event-cta-content">
+
+            <h2>
+                Let’s Turn Your Event into an <br>
+                Unforgettable Experience
+            </h2>
+
+            <p>
+                From concept to creation, we design sculptures that captivate,
+                engage, and elevate every moment of your event.
+            </p>
+
+            <div class="event-cta-buttons">
+                <a href="contact.html" class="btn btn-primary">Book Your Event</a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-container">
+
+            <!-- LEFT: LOGO + TEXT -->
+            <div class="footer-col">
+                <img src="images/logo.png" alt="logo" class="footer-logo">
+                <p>
+                    Creating stunning sand and ice sculptures for events, festivals, and unforgettable experiences.
+                </p>
+
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+
+            <!-- ABOUT -->
+            <div class="footer-col">
+                <h4>About</h4>
+                <ul>
+                    <li><a href="#"><i class="fa-solid fa-angle-right"></i>About Us</a></li>
+                    <li><a href="#"><i class="fa-solid fa-angle-right"></i>Services</a></li>
+                    <li><a href="#"><i class="fa-solid fa-angle-right"></i>Gallery</a></li>
+                    <li><a href="#"><i class="fa-solid fa-angle-right"></i>Packages</a></li>
+                </ul>
+            </div>
+
+            <!-- CONTACT -->
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li><i class="fa-solid fa-location-dot"></i> Chennai, India</li>
+                    <li><i class="fa-solid fa-envelope"></i> contact@sandice.com</li>
+                    <li><i class="fa-solid fa-phone"></i> +91 98765 43210</li>
+                </ul>
+            </div>
+
+            <!-- CTA -->
+            <div class="footer-col">
+                <h4>Get Started</h4>
+                <p>Book your event with us today.</p>
+                <a href="#" class="btn btn-primary">Book Now</a>
+            </div>
+
+        </div>
+
+        <!-- BOTTOM -->
+        <div class="footer-bottom">
+            <div class="container footer-bottom-container">
+                <p>© 2026 SandIce Artistry. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="scrollTopBtn">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

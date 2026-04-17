@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SandIce Artistry</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="has-navbar">
+
+    <header class="navbar">
+        <div class="container nav-container">
+
+            <div class="logo">
+                <img src="images/logo.png" alt="SandIce Logo">
+            </div>
+            <!-- HAMBURGER -->
+            <div class="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <!-- MENU -->
+            <nav class="menu">
+                <ul>
+
+                    <!-- HOME -->
+                    <li class="dropdown">
+                        <a href="#">Home <i class="fa-solid fa-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html">Home 1</a></li>
+                            <li><a href="home2.html">Home 2</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- ABOUT -->
+                    <li><a href="about.html">About Us</a></li>
+
+                    <!-- SERVICES -->
+                    <li class="dropdown">
+                        <a href="#" class="active">Services <i class="fa-solid fa-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="sandice.html">Sand & Ice Sculptures</a></li>
+                            <li><a href="event.html">Event Sculptures</a></li>
+                            <li><a href="booking.html">Festival Bookings</a></li>
+                            <li><a href="packages.html" class="active">Packages</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- GALLERY -->
+                    <li class="dropdown">
+                        <a href="#">Gallery <i class="fa-solid fa-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="art.html">SandIce Art </a></li>
+                            <li><a href="highlight.html">Event Highlights</a></li>
+                        </ul>
+                    </li>
+
+
+                    <!-- CONTACT -->
+                    <li><a href="contact.html">Contact Us</a></li>
+
+                    <li class="mobile-clone">
+
+                        <!-- TOGGLES (SAME LINE) -->
+                        <div class="mobile-toggles">
+                            <button id="darkToggle" class="toggle-btn">
+                                <i class="fa-solid fa-moon"></i>
+                            </button>
+
+                            <button id="rtlToggle" class="toggle-btn">
+                                <i class="fa-solid fa-right-left"></i>
+                            </button>
+                        </div>
+
+                        <!-- LOGIN BELOW -->
+                        <div class="mobile-login">
+                            <a href="login.html" class="btn btn-primary">Login</a>
+                        </div>
+
+                    </li>
+
+                </ul>
+            </nav>
+
+            <!-- RIGHT SIDE -->
+            <div class="nav-right">
+                <!-- DARK MODE TOGGLE -->
+                <button id="darkToggle" class="toggle-btn">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+                <!-- RTL TOGGLE -->
+                <button id="rtlToggle" class="toggle-btn">
+                    <i class="fa-solid fa-right-left"></i>
+                </button>
+
+                <a href="login.html" class="btn btn-primary">Login</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="contact-hero">
+
+        <div class="hero-overlay"></div>
+
+        <div class="container hero-content">
+            <h1>Custom Packages, Crafted For You</h1>
+            <p>
+                Every event is unique, and so is our approach, with flexible pricing designed around your needs.
+            </p>
+        </div>
+
+    </section>
+
+    <!-- PACKAGES INTRODUCTION (IDEA SECTION) -->
+    <section class="packages-idea">
+        <div class="container packages-idea-grid">
+            <div class="packages-idea-text">
+                <h2>Flexible pricing based on event type and scale</h2>
+                <p>
+                    From small setups to large festival builds, we shape every quote around your venue, crowd size, and
+                    creative goal—so you get the right impact without overpaying.
+                </p>
+
+                <ul class="packages-highlights">
+                    <li><i class="fa-solid fa-check"></i> Customizable</li>
+                    <li><i class="fa-solid fa-check"></i> Scalable</li>
+                    <li><i class="fa-solid fa-check"></i> Budget-friendly</li>
+                </ul>
+            </div>
+
+            <div class="packages-idea-media">
+                <img src="images/custom-sculpture.jpg" alt="Custom sculpture planning">
+            </div>
+        </div>
+    </section>
+
+    <!-- EVENT-BASED PRICING (MAIN SECTION) -->
+    <section class="packages-pricing">
+        <div class="container">
+            <div class="packages-section-header">
+                <h2>Event-Based Pricing</h2>
+                <p>Choose a starting package and customize it based on your event requirements.</p>
+            </div>
+
+            <!-- FESTIVAL -->
+            <div class="pricing-category" id="festival-packages">
+                <div class="pricing-category-title">
+                    <h3><span class="icon">🎪</span> Festival</h3>
+                </div>
+
+                <div class="pricing-grid">
+                    <article class="pricing-card">
+                        <h4>Starter Festival</h4>
+                        <p class="pricing-price"><span>Starting from</span> ₹25,000</p>
+                        <ul class="pricing-features">
+                            <li>Compact crowd-attractor design</li>
+                            <li>Fast setup & execution</li>
+                            <li>Best for small venues</li>
+                        </ul>
+                        <a href="booking.html" class="btn btn-primary">Book Now</a>
+                    </article>
+
+                    <article class="pricing-card featured">
+                        <span class="pricing-tag">Most Popular</span>
+                        <h4>Premium Festival</h4>
+                        <p class="pricing-price"><span>Starting from</span> ₹75,000</p>
+                        <ul class="pricing-features">
+                            <li>Large-scale centerpiece sculpture</li>
+                            <li>Multiple concepts / zones</li>
+                            <li>Optional live sculpting</li>
+                            <li>Designed for high footfall</li>
+                        </ul>
+                        <a href="booking.html" class="btn btn-primary">Book Now</a>
+                    </article>
+
+                    <article class="pricing-card">
+                        <h4>Mega Festival</h4>
+                        <p class="pricing-price"><span>Custom</span> Quote</p>
+                        <ul class="pricing-features">
+                            <li>Massive installations & branding</li>
+                            <li>Multi-day execution</li>
+                            <li>Dedicated on-site team</li>
+                        </ul>
+                        <a href="booking.html" class="btn btn-primary">Book Now</a>
+                    </article>
+                </div>
+            </div>
+
+            <!-- WEDDING -->
+            <div class="pricing-category" id="wedding-packages">
+                <div class="pricing-category-title">
+                    <h3><span class="icon">💍</span> Wedding</h3>
+                </div>
+
+                <div class="pricing-grid">
+                    <article class="pricing-card">
+                        <h4>Ice Sculpture</h4>
+                        <p class="pricing-price"><span>Starting from</span> ₹15,000</p>
+                        <ul class="pricing-features">
+                            <li>Classic centerpiece sculpture</li>
+                            <li>Name / initials option</li>
+                            <li>Ideal for entry or buffet</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary">Book Now</a>
+                    </article>
+
+                    <article class="pricing-card featured">
+                        <span class="pricing-tag">Best Value</span>
+                        <h4>Premium Decor</h4>
+                        <p class="pricing-price"><span>Starting from</span> ₹40,000</p>
+                        <ul class="pricing-features">
+                            <li>Couple-themed sculpture concept</li>
+                            <li>Photo-worthy placement planning</li>
+                            <li>Finishing & detailing included</li>
+                            <li>Optional lighting add-on</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary">Book Now</a>
+                    </article>
+
+                    <article class="pricing-card">
+                        <h4>Luxury Setup</h4>
+                        <p class="pricing-price"><span>Custom</span> Quote</p>
+                        <ul class="pricing-features">
+                            <li>Multiple sculptures / zones</li>
+                            <li>Premium finishing & upgrades</li>
+                            <li>On-site creative supervision</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary">Book Now</a>
+                    </article>
+                </div>
+            </div>
+
+            <!-- CORPORATE -->
+            <div class="pricing-category" id="corporate-packages">
+                <div class="pricing-category-title">
+                    <h3><span class="icon">🏢</span> Corporate</h3>
+                </div>
+
+                <div class="pricing-grid">
+                    <article class="pricing-card">
+                        <h4>Brand Starter</h4>
+                        <p class="pricing-price"><span>Starting from</span> ₹30,000</p>
+                        <ul class="pricing-features">
+                            <li>Logo / brand element sculpture</li>
+                            <li>Stage / lobby placement</li>
+                            <li>Quick setup & teardown</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary">Book Now</a>
+                    </article>
+
+                    <article class="pricing-card featured">
+                        <span class="pricing-tag">Recommended</span>
+                        <h4>Product Launch</h4>
+                        <p class="pricing-price"><span>Starting from</span> ₹60,000</p>
+                        <ul class="pricing-features">
+                            <li>Concept + design planning</li>
+                            <li>High-visibility installation</li>
+                            <li>Multiple brand touchpoints</li>
+                            <li>Optional live sculpting</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary">Book Now</a>
+                    </article>
+
+                    <article class="pricing-card">
+                        <h4>Corporate Premium</h4>
+                        <p class="pricing-price"><span>Custom</span> Quote</p>
+                        <ul class="pricing-features">
+                            <li>Large installations & zones</li>
+                            <li>Multi-day onsite execution</li>
+                            <li>Priority support & revisions</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary">Book Now</a>
+                    </article>
+                </div>
+            </div>
+
+            <!-- PRIVATE -->
+            <div class="pricing-category" id="private-packages">
+                <div class="pricing-category-title">
+                    <h3><span class="icon">🎉</span> Private</h3>
+                </div>
+
+                <div class="pricing-grid">
+                    <article class="pricing-card">
+                        <h4>Private Starter</h4>
+                        <p class="pricing-price"><span>Starting from</span> ₹10,000</p>
+                        <ul class="pricing-features">
+                            <li>Small custom sculpture</li>
+                            <li>Theme-based concept</li>
+                            <li>Perfect for birthdays</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary">Book Now</a>
+                    </article>
+
+                    <article class="pricing-card featured">
+                        <span class="pricing-tag">Most Booked</span>
+                        <h4>Celebration Premium</h4>
+                        <p class="pricing-price"><span>Starting from</span> ₹25,000</p>
+                        <ul class="pricing-features">
+                            <li>Detailed centerpiece sculpture</li>
+                            <li>Optional name / message</li>
+                            <li>On-site setup included</li>
+                            <li>Finishing & detailing</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary">Book Now</a>
+                    </article>
+
+                    <article class="pricing-card">
+                        <h4>Private Custom</h4>
+                        <p class="pricing-price"><span>Custom</span> Quote</p>
+                        <ul class="pricing-features">
+                            <li>Multiple pieces & themes</li>
+                            <li>Size upgrades available</li>
+                            <li>Lighting / live sculpting add-ons</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary">Book Now</a>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXAMPLE WORKS (TRUST SECTION) -->
+    <section class="packages-works">
+        <div class="container">
+            <div class="packages-section-header">
+                <h2>Here’s What We’ve Created</h2>
+                <p>Real event setups and sculptures—visual proof of our craftsmanship.</p>
+            </div>
+
+            <div class="event-gallery-grid works-grid">
+                <div class="event-gallery-item is-tall">
+                    <img src="images/festival-main.jpg" alt="Festival setup showcase">
+                </div>
+                <div class="event-gallery-item">
+                    <img src="images/event1.jpg" alt="Event sculpture example 1">
+                </div>
+                <div class="event-gallery-item">
+                    <img src="images/event2.jpg" alt="Event sculpture example 2">
+                </div>
+                <div class="event-gallery-item is-tall">
+                    <img src="images/corporate.jpg" alt="Corporate event sculpture showcase">
+                </div>
+                <div class="event-gallery-item is-tall stack-2">
+                    <img src="images/ice2.jpg" alt="Ice sculpture example">
+                    <img src="images/ice3.jpg" alt="Ice sculpture example 2">
+                </div>
+                <div class="event-gallery-item">
+                    <img src="images/private.jpg" alt="Private event sculpture example">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHAT'S INCLUDED -->
+    <section class="packages-included">
+        <div class="container">
+            <div class="packages-section-header">
+                <h2>What’s Included in Every Package</h2>
+                <p>Clear value, professional execution, and a smooth experience—every time.</p>
+            </div>
+
+            <div class="included-grid">
+                <article class="included-card">
+                    <div class="included-icon"><i class="fa-solid fa-compass-drafting"></i></div>
+                    <h3>Design Planning</h3>
+                    <p>We plan concept, placement, and size to match your event.</p>
+                </article>
+
+                <article class="included-card">
+                    <div class="included-icon"><i class="fa-solid fa-cubes"></i></div>
+                    <h3>Material Selection</h3>
+                    <p>Sand, ice, or both—chosen based on venue conditions and goal.</p>
+                </article>
+
+                <article class="included-card">
+                    <div class="included-icon"><i class="fa-solid fa-truck-ramp-box"></i></div>
+                    <h3>On-site Setup</h3>
+                    <p>Transport, installation, and finishing done by our team.</p>
+                </article>
+
+                <article class="included-card">
+                    <div class="included-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                    <h3>Finishing & Detailing</h3>
+                    <p>Clean edges, highlights, and final polish for camera-ready impact.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- CUSTOMIZATION & ADD-ONS -->
+    <section class="packages-addons">
+        <div class="container addons-grid">
+            <div class="addons-text">
+                <h2>Customization & Add-ons</h2>
+                <p>
+                    Add unique upgrades to match your brand and theme.
+                    <span class="addons-note">Every package can be customized based on your needs.</span>
+                </p>
+
+                <ul class="addons-list">
+                    <li><i class="fa-solid fa-star"></i> Logo sculptures</li>
+                    <li><i class="fa-solid fa-up-right-and-down-left-from-center"></i> Extra size upgrades</li>
+                    <li><i class="fa-solid fa-lightbulb"></i> Lighting effects</li>
+                    <li><i class="fa-solid fa-person-chalkboard"></i> Live sculpting</li>
+                </ul>
+            </div>
+
+            <div class="addons-media">
+                <img src="images/live-sculpture.jpg" alt="Live sculpting at events">
+            </div>
+        </div>
+    </section>
+
+    <!-- CUSTOM COMMISSION FORM (REUSED FROM CONTACT) -->
+    <section class="commission-section">
+        <div class="container">
+            <div class="commission-header">
+                <h2>Get Custom Quote</h2>
+                <p>Tell us your requirements and we’ll suggest the best package with a clear quote.</p>
+            </div>
+
+            <form class="commission-form">
+                <div class="form-grid">
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder="Email Address" required>
+
+                    <input type="tel" placeholder="Phone Number">
+
+                    <div class="select-box">
+                        <select required>
+                            <option value="">Select Service</option>
+                            <option>Sand Sculpture</option>
+                            <option>Ice Sculpture</option>
+                            <option>Event Sculptures</option>
+                            <option>Festival Bookings</option>
+                            <option>Custom Design</option>
+                        </select>
+                    </div>
+
+                    <div class="select-box">
+                        <select required>
+                            <option value="">Material Type</option>
+                            <option>Sand</option>
+                            <option>Ice</option>
+                            <option>Both</option>
+                        </select>
+                    </div>
+
+                    <div class="select-box">
+                        <select>
+                            <option value="">Event Type</option>
+                            <option>Wedding</option>
+                            <option>Birthday</option>
+                            <option>Festival</option>
+                            <option>Corporate Event</option>
+                        </select>
+                    </div>
+
+                    <input type="date">
+                    <input type="text" placeholder="Event Location">
+                </div>
+
+                <textarea placeholder="Describe Your Idea / Requirements "></textarea>
+
+                <button type="submit" class="btn btn-primary">Get Custom Quote</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="cta-section">
+        <div class="cta-overlay"></div>
+        <div class="container cta-content">
+            <h2>Not sure which package to choose?</h2>
+            <p>Contact us for guidance—we’ll recommend the best setup for your event.</p>
+            <div class="cta-buttons">
+                <a href="contact.html" class="btn btn-primary">Contact</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-container">
+
+            <!-- LEFT: LOGO + TEXT -->
+            <div class="footer-col">
+                <img src="images/logo.png" alt="logo" class="footer-logo">
+                <p>
+                    Creating stunning sand and ice sculptures for events, festivals, and unforgettable experiences.
+                </p>
+
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+
+            <!-- ABOUT -->
+            <div class="footer-col">
+                <h4>About</h4>
+                <ul>
+                    <li><a href="#"><i class="fa-solid fa-angle-right"></i>About Us</a></li>
+                    <li><a href="#"><i class="fa-solid fa-angle-right"></i>Services</a></li>
+                    <li><a href="#"><i class="fa-solid fa-angle-right"></i>Gallery</a></li>
+                    <li><a href="#"><i class="fa-solid fa-angle-right"></i>Packages</a></li>
+                </ul>
+            </div>
+
+            <!-- CONTACT -->
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li><i class="fa-solid fa-location-dot"></i> Chennai, India</li>
+                    <li><i class="fa-solid fa-envelope"></i> contact@sandice.com</li>
+                    <li><i class="fa-solid fa-phone"></i> +91 98765 43210</li>
+                </ul>
+            </div>
+
+            <!-- CTA -->
+            <div class="footer-col">
+                <h4>Get Started</h4>
+                <p>Book your event with us today.</p>
+                <a href="#" class="btn btn-primary">Book Now</a>
+            </div>
+
+        </div>
+
+        <!-- BOTTOM -->
+        <div class="footer-bottom">
+            <div class="container footer-bottom-container">
+                <p>© 2026 SandIce Artistry. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="scrollTopBtn">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

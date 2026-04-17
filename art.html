@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SandIce Artistry</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="has-navbar">
+
+
+    <header class="navbar">
+        <div class="container nav-container">
+
+            <div class="logo">
+                <img src="images/logo.png" alt="SandIce Logo">
+            </div>
+            <!-- HAMBURGER -->
+            <div class="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <!-- MENU -->
+            <nav class="menu">
+                <ul>
+
+                    <!-- HOME -->
+                    <li class="dropdown">
+                        <a href="#">Home <i class="fa-solid fa-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html">Home 1</a></li>
+                            <li><a href="home2.html">Home 2</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- ABOUT -->
+                    <li><a href="about.html">About Us</a></li>
+
+                    <!-- SERVICES -->
+                    <li class="dropdown">
+                        <a href="#">Services <i class="fa-solid fa-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="sandice.html">Sand & Ice Sculptures</a></li>
+                            <li><a href="event.html">Event Sculptures</a></li>
+                            <li><a href="booking.html">Festival Bookings</a></li>
+                            <li><a href="packages.html">Packages</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- GALLERY -->
+                    <li class="dropdown">
+                        <a href="#" class="active">Gallery <i class="fa-solid fa-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="art.html" class="active">SandIce Art </a></li>
+                            <li><a href="highlight.html">Event Highlights</a></li>
+                        </ul>
+                    </li>
+
+
+                    <!-- CONTACT -->
+                    <li><a href="contact.html">Contact Us</a></li>
+
+                    <li class="mobile-clone">
+
+                        <!-- TOGGLES (SAME LINE) -->
+                        <div class="mobile-toggles">
+                            <button id="darkToggle" class="toggle-btn">
+                                <i class="fa-solid fa-moon"></i>
+                            </button>
+
+                            <button id="rtlToggle" class="toggle-btn">
+                                <i class="fa-solid fa-right-left"></i>
+                            </button>
+                        </div>
+
+                        <!-- LOGIN BELOW -->
+                        <div class="mobile-login">
+                            <a href="login.html" class="btn btn-primary">Login</a>
+                        </div>
+
+                    </li>
+
+                </ul>
+            </nav>
+
+            <!-- RIGHT SIDE -->
+            <div class="nav-right">
+                <!-- DARK MODE TOGGLE -->
+                <button id="darkToggle" class="toggle-btn">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+                <!-- RTL TOGGLE -->
+                <button id="rtlToggle" class="toggle-btn">
+                    <i class="fa-solid fa-right-left"></i>
+                </button>
+
+                <a href="login.html" class="btn btn-primary">Login</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="contact-hero ">
+
+        <div class="hero-overlay"></div>
+
+        <div class="container hero-content">
+            <h1>Signature Masterpieces</h1>
+            <p>
+                A curated gallery of sand and ice sculptures crafted for unforgettable experiences.
+            </p>
+        </div>
+
+    </section>
+
+
+    <!-- 1️⃣ 🌟 Signature Masterpieces (Hero Gallery Feel) -->
+    <section class="signature-masterpieces">
+        <div class="container">
+            <div class="art-section-header">
+                <h2>First impression wow factor</h2>
+                <p>Large featured sculptures that blend sand artistry and ice elegance.</p>
+            </div>
+
+            <div class="masterpieces-grid">
+                <article class="masterpiece-tile is-featured">
+                    <img src="images/mixed.jpg" alt="Signature mixed sand and ice masterpiece">
+                    <div class="masterpiece-overlay">
+                        <h3>Mixed Showcase</h3>
+                        <p>Designed to stop the crowd.</p>
+                    </div>
+                </article>
+
+                <article class="masterpiece-tile">
+                    <img src="images/sand-castle.jpg" alt="Signature sand castle sculpture">
+                    <div class="masterpiece-overlay">
+                        <h3>Sand Castle</h3>
+                        <p>Monumental builds with fine detail.</p>
+                    </div>
+                </article>
+
+                <article class="masterpiece-tile">
+                    <img src="images/ice-bar.jpg" alt="Signature ice bar sculpture">
+                    <div class="masterpiece-overlay">
+                        <h3>Ice Bar</h3>
+                        <p>Crystal-clear premium finishing.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2️⃣ 🔄 Material Switch Gallery (Sand vs Ice Toggle) -->
+    <section class="material-switch">
+        <div class="container">
+            <div class="art-section-header">
+                <h2>Material Switch Gallery</h2>
+                <p>Filter and explore: Sand Art vs Ice Art.</p>
+            </div>
+
+            <div class="material-toggle" role="tablist" aria-label="Filter gallery by material">
+                <button type="button" class="material-btn is-active" data-filter="sand" role="tab"
+                    aria-selected="true">Sand Art</button>
+                <button type="button" class="material-btn" data-filter="ice" role="tab" aria-selected="false">Ice
+                    Art</button>
+                <button type="button" class="material-btn" data-filter="all" role="tab"
+                    aria-selected="false">All</button>
+            </div>
+
+            <div class="material-gallery" aria-live="polite">
+                <figure class="material-item" data-material="sand">
+                    <img src="images/sand1.jpg" alt="Sand sculpture example 1">
+                </figure>
+                <figure class="material-item" data-material="sand">
+                    <img src="images/sand2.jpg" alt="Sand sculpture example 2">
+                </figure>
+                <figure class="material-item" data-material="sand">
+                    <img src="images/sand3.jpg" alt="Sand sculpture example 3">
+                </figure>
+                <figure class="material-item" data-material="sand">
+                    <img src="images/sand4.jpg" alt="Sand sculpture example 4">
+                </figure>
+
+                <figure class="material-item" data-material="ice">
+                    <img src="images/ice1.jpg" alt="Ice sculpture example 1">
+                </figure>
+                <figure class="material-item" data-material="ice">
+                    <img src="images/ice2.jpg" alt="Ice sculpture example 2">
+                </figure>
+                <figure class="material-item" data-material="ice">
+                    <img src="images/ice3.jpg" alt="Ice sculpture example 3">
+                </figure>
+                <figure class="material-item" data-material="ice">
+                    <img src="images/ice4.jpg" alt="Ice sculpture example 4">
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3️⃣ 🎨 Art Styles & Categories -->
+    <section class="art-categories">
+        <div class="container">
+            <div class="art-section-header">
+                <h2>Art Styles & Categories</h2>
+                <p>A quick look at the variety we craft across sand and ice formats.</p>
+            </div>
+
+            <div class="category-grid">
+                <article class="category-card">
+                    <div class="category-media">
+                        <img src="images/sand-castle.jpg" alt="Sand castle category">
+                    </div>
+                    <div class="category-body">
+                        <h3>Sand Castles</h3>
+                        <p>From compact builds to landmark-level castles.</p>
+                    </div>
+                </article>
+
+                <article class="category-card">
+                    <div class="category-media">
+                        <img src="images/festival.jpg" alt="Festival sculptures category">
+                    </div>
+                    <div class="category-body">
+                        <h3>Festival Sculptures</h3>
+                        <p>High-visibility installations for maximum crowd pull.</p>
+                    </div>
+                </article>
+
+                <article class="category-card">
+                    <div class="category-media">
+                        <img src="images/ice-bar.jpg" alt="Ice bars category">
+                    </div>
+                    <div class="category-body">
+                        <h3>Ice Bars</h3>
+                        <p>Functional ice design with premium finishing.</p>
+                    </div>
+                </article>
+
+                <article class="category-card">
+                    <div class="category-media">
+                        <img src="images/ice-festival.jpg" alt="Wedding ice designs category">
+                    </div>
+                    <div class="category-body">
+                        <h3>Wedding Ice Designs</h3>
+                        <p>Elegant centerpieces, initials, and luxury décor.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4️⃣ 🔍 Detail & Craftsmanship Close-ups -->
+    <section class="detail-closeups">
+        <div class="container">
+            <div class="art-section-header">
+                <h2>Precision in Every Detail</h2>
+                <p>Close-up views of fine carving, texture work, and finishing quality.</p>
+            </div>
+
+            <div class="closeups-grid">
+                <figure class="closeup-card">
+                    <img src="images/detail1.jpg" alt="Sand texture close-up">
+                </figure>
+                <figure class="closeup-card">
+                    <img src="images/detail2.jpg" alt="Ice texture close-up">
+                </figure>
+                <figure class="closeup-card">
+                    <img src="images/detail3.jpg" alt="Fine carving close-up 1">
+                </figure>
+                <figure class="closeup-card">
+                    <img src="images/detail4.jpg" alt="Fine carving close-up 2">
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5️⃣ 🎉 Real Event Highlights -->
+    <section class="real-event-highlights">
+        <div class="container">
+            <div class="art-section-header">
+                <h2>Real Event Highlights</h2>
+                <p>Festivals, weddings, corporate events, and the real crowd environment.</p>
+            </div>
+
+            <div class="highlights-grid">
+                <figure class="highlight-card">
+                    <img src="images/sand-festival.jpg" alt="Festival crowd highlight">
+                    <figcaption>Festivals</figcaption>
+                </figure>
+                <figure class="highlight-card">
+                    <img src="images/event3.jpg" alt="Wedding event highlight">
+                    <figcaption>Weddings</figcaption>
+                </figure>
+                <figure class="highlight-card">
+                    <img src="images/corporate.jpg" alt="Corporate event highlight">
+                    <figcaption>Corporate</figcaption>
+                </figure>
+                <figure class="highlight-card">
+                    <img src="images/private.jpg" alt="Private event highlight">
+                    <figcaption>Private</figcaption>
+                </figure>
+                <figure class="highlight-card">
+                    <img src="images/live-event1.jpg" alt="Live sculpting during event highlight">
+                    <figcaption>Live Sculpting</figcaption>
+                </figure>
+                <figure class="highlight-card">
+                    <img src="images/live-event2.jpg" alt="Event setup environment highlight">
+                    <figcaption>Event Setup</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-container">
+
+            <!-- LEFT: LOGO + TEXT -->
+            <div class="footer-col">
+                <img src="images/logo.png" alt="logo" class="footer-logo">
+                <p>
+                    Creating stunning sand and ice sculptures for events, festivals, and unforgettable experiences.
+                </p>
+
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+
+            <!-- ABOUT -->
+            <div class="footer-col">
+                <h4>About</h4>
+                <ul>
+                    <li><a href="#"><i class="fa-solid fa-angle-right"></i>About Us</a></li>
+                    <li><a href="#"><i class="fa-solid fa-angle-right"></i>Services</a></li>
+                    <li><a href="#"><i class="fa-solid fa-angle-right"></i>Gallery</a></li>
+                    <li><a href="#"><i class="fa-solid fa-angle-right"></i>Packages</a></li>
+                </ul>
+            </div>
+
+            <!-- CONTACT -->
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li><i class="fa-solid fa-location-dot"></i> Chennai, India</li>
+                    <li><i class="fa-solid fa-envelope"></i> contact@sandice.com</li>
+                    <li><i class="fa-solid fa-phone"></i> +91 98765 43210</li>
+                </ul>
+            </div>
+
+            <!-- CTA -->
+            <div class="footer-col">
+                <h4>Get Started</h4>
+                <p>Book your event with us today.</p>
+                <a href="#" class="btn btn-primary">Book Now</a>
+            </div>
+
+        </div>
+
+        <!-- BOTTOM -->
+        <div class="footer-bottom">
+            <div class="container footer-bottom-container">
+                <p>© 2026 SandIce Artistry. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="scrollTopBtn">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
