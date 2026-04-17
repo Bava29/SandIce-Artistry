@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SandIce Artistry</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="has-navbar">
+
+    <header class="navbar">
+        <div class="container nav-container">
+
+            <div class="logo">
+                <img src="images/logo.png" alt="SandIce Logo">
+            </div>
+            <!-- HAMBURGER -->
+            <div class="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <!-- MENU -->
+            <nav class="menu">
+                <ul>
+
+                    <!-- HOME -->
+                    <li class="dropdown">
+                        <a href="#">Home <i class="fa-solid fa-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html">Home 1</a></li>
+                            <li><a href="home2.html">Home 2</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- ABOUT -->
+                    <li><a href="about.html">About Us</a></li>
+
+                    <!-- SERVICES -->
+                    <li class="dropdown">
+                        <a href="#" class="active">Services <i class="fa-solid fa-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="sandice.html">Sand & Ice Sculptures</a></li>
+                            <li><a href="event.html">Event Sculptures</a></li>
+                            <li><a href="booking.html" class="active">Festival Bookings</a></li>
+                            <li><a href="packages.html">Packages</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- GALLERY -->
+                    <li class="dropdown">
+                        <a href="#">Gallery <i class="fa-solid fa-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="art.html">SandIce Art </a></li>
+                            <li><a href="highlight.html">Event Highlights</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- CONTACT -->
+                    <li><a href="contact.html">Contact Us</a></li>
+
+                    <li class="mobile-clone">
+
+                        <!-- TOGGLES (SAME LINE) -->
+                        <div class="mobile-toggles">
+                            <button id="darkToggle" class="toggle-btn">
+                                <i class="fa-solid fa-moon"></i>
+                            </button>
+
+                            <button id="rtlToggle" class="toggle-btn">
+                                <i class="fa-solid fa-right-left"></i>
+                            </button>
+                        </div>
+
+                        <!-- LOGIN BELOW -->
+                        <div class="mobile-login">
+                            <a href="login.html" class="btn btn-primary">Login</a>
+                        </div>
+
+                    </li>
+
+                </ul>
+            </nav>
+
+            <!-- RIGHT SIDE -->
+            <div class="nav-right">
+                <!-- DARK MODE TOGGLE -->
+                <button id="darkToggle" class="toggle-btn">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+                <!-- RTL TOGGLE -->
+                <button id="rtlToggle" class="toggle-btn">
+                    <i class="fa-solid fa-right-left"></i>
+                </button>
+
+                <a href="login.html" class="btn btn-primary">Login</a>
+            </div>
+        </div>
+    </header>
+
+
+    <section class="contact-hero">
+
+        <div class="hero-overlay"></div>
+
+        <div class="container hero-content">
+            <h1>Make Your Festival Unforgettable</h1>
+            <p>
+                From large-scale sculptures to live crowd attractions, we create experiences that draw attention and
+                elevate every festival.
+            </p>
+        </div>
+
+    </section>
+
+    <section class="festival-overview">
+
+        <div class="container festival-overview-container">
+
+            <!-- LEFT CONTENT -->
+            <div class="festival-text">
+                <h2>Festival Experiences at Scale</h2>
+
+                <p>
+                    We design large-scale sand and ice sculptures that attract crowds,
+                    enhance event spaces, and create unforgettable festival moments.
+                </p>
+
+                <div class="festival-highlights">
+                    <div>✔ Large crowd-pulling installations</div>
+                    <div>✔ High-visibility artistic structures</div>
+                    <div>✔ Designed for public & festival spaces</div>
+                </div>
+            </div>
+
+            <!-- RIGHT IMAGE -->
+            <div class="festival-image">
+                <img src="images/festival-main.jpg" alt="festival sculpture">
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="festival-packages-alt" id="festival-packages">
+        <div class="container">
+
+            <div class="festival-packages-header">
+                <h2>Choose Your Festival Setup</h2>
+                <p>Flexible packages designed for every event scale</p>
+            </div>
+
+            <div class="festival-packages-scroll" role="list">
+
+                <!-- CARD 1 -->
+                <article class="package-strip" role="listitem">
+                    <h3>Basic Festival</h3>
+                    <p class="price">₹25,000+</p>
+
+                    <ul class="package-features">
+                        <li>Small sculpture setup</li>
+                        <li>Single design concept</li>
+                        <li>Quick installation</li>
+                    </ul>
+
+                    <a href="#" class="btn btn-primary">Book Now</a>
+                </article>
+
+                <!-- CARD 2 (FEATURED) -->
+                <article class="package-strip featured" role="listitem">
+                    <span class="package-tag">Most Popular</span>
+                    <h3>Premium Festival</h3>
+                    <p class="price">₹75,000+</p>
+
+                    <ul class="package-features">
+                        <li>Large-scale sculpture</li>
+                        <li>Multiple concepts</li>
+                        <li>Live sculpting</li>
+                    </ul>
+
+                    <a href="#" class="btn btn-primary">Book Now</a>
+                </article>
+
+                <!-- CARD 3 -->
+                <article class="package-strip" role="listitem">
+                    <h3>Mega Custom</h3>
+                    <p class="price">Custom</p>
+
+                    <ul class="package-features">
+                        <li>Massive installations</li>
+                        <li>Full customization</li>
+                        <li>Multi-day execution</li>
+                    </ul>
+
+                    <a href="#" class="btn btn-primary">Book Now</a>
+                </article>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="festival-types-alt">
+
+        <!-- ITEM 1 -->
+        <div class="type-row">
+            <div class="type-image">
+                <img src="images/sand-festival.jpg">
+            </div>
+            <div class="type-content">
+                <h2>Sand Festival Builds</h2>
+                <p>
+                    Large-scale sand sculptures crafted to attract crowds and
+                    create iconic festival landmarks.
+                </p>
+                <div class="type-meta" aria-label="Quick info">
+                    <span class="type-chip"><i class="fa-solid fa-people-group"></i> Crowd magnet</span>
+                    <span class="type-chip"><i class="fa-solid fa-sun"></i> Outdoor ready</span>
+                    <span class="type-chip"><i class="fa-solid fa-flag"></i> Theme builds</span>
+                </div>
+                <div class="type-actions">
+                    <a href="#festival-packages" class="btn btn-primary">See Packages</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ITEM 2 -->
+        <div class="type-row reverse">
+            <div class="type-image">
+                <img src="images/ice-festival.jpg">
+            </div>
+            <div class="type-content">
+                <h2>Ice Displays</h2>
+                <p>
+                    Elegant ice installations that add a premium and
+                    visually striking touch to events.
+                </p>
+                <div class="type-meta" aria-label="Quick info">
+                    <span class="type-chip"><i class="fa-solid fa-snowflake"></i> Premium look</span>
+                    <span class="type-chip"><i class="fa-solid fa-lightbulb"></i> LED add-on</span>
+                    <span class="type-chip"><i class="fa-solid fa-camera-retro"></i> Photo-ready</span>
+                </div>
+                <div class="type-actions">
+                    <a href="#festival-packages" class="btn btn-primary">See Packages</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ITEM 3 -->
+        <div class="type-row">
+            <div class="type-image">
+                <img src="images/mixed.jpg">
+            </div>
+            <div class="type-content">
+                <h2>Mixed Installations</h2>
+                <p>
+                    Creative combinations of sand, ice, and lighting
+                    for a truly immersive festival experience.
+                </p>
+                <div class="type-meta" aria-label="Quick info">
+                    <span class="type-chip"><i class="fa-solid fa-wand-magic-sparkles"></i> Signature combo</span>
+                    <span class="type-chip"><i class="fa-solid fa-bolt"></i> High impact</span>
+                    <span class="type-chip"><i class="fa-solid fa-clock"></i> Fast setup</span>
+                </div>
+                <div class="type-actions">
+                    <a href="#festival-packages" class="btn btn-primary">See Packages</a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="festival-zones-alt">
+
+        <div class="container">
+
+            <div class="zones-header">
+                <h2>Festival Setup Zones</h2>
+                <p>Strategically designed placements to maximize impact</p>
+            </div>
+
+            <div class="zones-map">
+
+                <img src="images/festival-layout.jpg" alt="festival layout">
+
+                <!-- POINT 1 -->
+                <div class="zone-point" style="top: 30%; left: 20%;">
+                    <span>1</span>
+                    <div class="zone-info">
+                        <h4>Entry Gate</h4>
+                        <p>Grand sculptures to welcome visitors</p>
+                    </div>
+                </div>
+
+                <!-- POINT 2 -->
+                <div class="zone-point" style="top: 50%; left: 48%;">
+                    <span>2</span>
+                    <div class="zone-info">
+                        <h4>Stage Highlight</h4>
+                        <p>Backdrop sculptures for main stage</p>
+                    </div>
+                </div>
+
+                <!-- POINT 3 -->
+                <div class="zone-point" style="top: 70%; left: 74%;">
+                    <span>3</span>
+                    <div class="zone-info">
+                        <h4>Walkway</h4>
+                        <p>Interactive attractions across paths</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="festival-live-alt">
+
+        <div class="festival-live-overlay"></div>
+
+        <div class="container festival-live-content">
+
+            <h2>Live Event Experience</h2>
+
+            <p>
+                Our live sculpting transforms your event into a dynamic visual
+                experience, attracting crowds and creating unforgettable moments.
+            </p>
+
+            <div class="live-points">
+                <div>Live sculpting performances</div>
+                <div>Crowd attraction & engagement</div>
+                <div>Perfect photo opportunities</div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+    <section class="festival-booking-alt">
+
+        <div class="container">
+
+            <div class="booking-ticket">
+
+                <!-- LEFT (FORM) -->
+                <div class="ticket-form">
+
+                    <h2>Reserve Your Festival Slot</h2>
+
+                    <form>
+
+                        <input type="text" placeholder="Event Name" required>
+                        <input type="date" required>
+                        <input type="text" placeholder="Location" required>
+                        <input type="number" placeholder="Crowd Size" required>
+
+                        <select required>
+                            <option value="" disabled selected>Select Package</option>
+                            <option>Basic</option>
+                            <option>Premium</option>
+                            <option>Mega</option>
+                        </select>
+
+                        <button class="btn btn-primary">Confirm Booking</button>
+
+                    </form>
+
+                </div>
+
+                <!-- RIGHT (VISUAL STRIP) -->
+                <div class="ticket-side">
+
+                    <div class="ticket-info">
+                        <h3>Festival Pass</h3>
+                        <p>Limited Slots Available</p>
+                        <span>Season Booking</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="festival-final-cta">
+
+        <div class="festival-cta-overlay"></div>
+
+        <div class="container festival-cta-content">
+
+            <h2>
+                Secure Your Festival Slot Before It’s Booked Out
+            </h2>
+
+            <p>
+                We take limited festival bookings each season to ensure quality and
+                attention to detail. Reserve your slot today.
+            </p>
+
+            <a href="#" class="btn btn-primary">Book Your Festival</a>
+
+        </div>
+
+    </section>
+
+
+    <footer class="footer">
+        <div class="container footer-container">
+
+            <!-- LEFT: LOGO + TEXT -->
+            <div class="footer-col">
+                <img src="images/logo.png" alt="logo" class="footer-logo">
+                <p>
+                    Creating stunning sand and ice sculptures for events, festivals, and unforgettable experiences.
+                </p>
+
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+
+            <!-- ABOUT -->
+            <div class="footer-col">
+                <h4>About</h4>
+                <ul>
+                    <li><a href="#"><i class="fa-solid fa-angle-right"></i>About Us</a></li>
+                    <li><a href="#"><i class="fa-solid fa-angle-right"></i>Services</a></li>
+                    <li><a href="#"><i class="fa-solid fa-angle-right"></i>Gallery</a></li>
+                    <li><a href="#"><i class="fa-solid fa-angle-right"></i>Packages</a></li>
+                </ul>
+            </div>
+
+            <!-- CONTACT -->
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li><i class="fa-solid fa-location-dot"></i> Chennai, India</li>
+                    <li><i class="fa-solid fa-envelope"></i> contact@sandice.com</li>
+                    <li><i class="fa-solid fa-phone"></i> +91 98765 43210</li>
+                </ul>
+            </div>
+
+            <!-- CTA -->
+            <div class="footer-col">
+                <h4>Get Started</h4>
+                <p>Book your event with us today.</p>
+                <a href="#" class="btn btn-primary">Book Now</a>
+            </div>
+
+        </div>
+
+        <!-- BOTTOM -->
+        <div class="footer-bottom">
+            <div class="container footer-bottom-container">
+                <p>© 2026 SandIce Artistry. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="scrollTopBtn">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

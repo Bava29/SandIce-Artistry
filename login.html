@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SandIce Artistry</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+
+
+<body>
+    <main class="auth-page">
+        <section class="auth-shell">
+            <div class="auth-split">
+                <div class="auth-panel auth-panel-art">
+                    <div class="auth-panel-overlay"></div>
+                    <div class="auth-panel-content">
+                        <div class="auth-panel-copy">
+                            <span class="auth-eyebrow">Sand & Ice Experiences</span>
+                            <h1>Welcome back to SandIce Artistry</h1>
+                            <p>
+                                Sign in to manage bookings, explore custom sculpture requests, and stay connected with
+                                our latest work.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="auth-panel auth-panel-form">
+                    <div class="auth-card">
+                        <a href="index.html" class="auth-form-logo">
+                            <img src="images/logo.png" alt="SandIce Logo">
+                        </a>
+
+                        <h2>Welcome Back</h2>
+                        <p class="auth-subtext">Please sign in to continue</p>
+
+                        <form class="auth-form">
+                            <div class="auth-field">
+                                <label for="loginEmail">Email Address</label>
+                                <input type="email" id="loginEmail" name="email" placeholder="Enter your email"
+                                    required>
+                            </div>
+
+                            <div class="auth-field">
+
+                                <label for="loginPassword">Password</label>
+
+                                <div class="password-field">
+                                    <input type="password" id="loginPassword" name="password"
+                                        placeholder="Enter your password" required>
+                                    <button type="button" class="toggle-password" aria-label="Show password">
+                                        <i class="fa-solid fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="auth-options">
+                                <label class="remember-me">
+                                    <input type="checkbox" name="remember">
+                                    <span>Remember me</span>
+                                </label>
+
+                                <a href="#" class="auth-inline-link">Forgot Password?</a>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary auth-submit">Log In</button>
+                        </form>
+
+                        <div class="auth-socials">
+                            <a href="#" aria-label="Login with Google"><i class="fa-brands fa-google"></i></a>
+                            <a href="#" aria-label="Login with Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Login with Apple"><i class="fa-brands fa-apple"></i></a>
+                        </div>
+
+                        <p class="auth-switch">
+                            New user?
+                            <a href="register.html">Register</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+<script src="js/main.js"></script>
+
+</html>
