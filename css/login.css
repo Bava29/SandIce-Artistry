@@ -19,7 +19,7 @@
 }
 
 .auth-panel-art {
-    background: url("../images/ice3.jpg") center/cover no-repeat;
+    background: url("../images/login-bg.jpg") center/cover no-repeat;
     color: #fff;
     display: flex;
     align-items: center;
@@ -202,7 +202,7 @@
     padding: 18px 24px;
     border-radius: 16px;
     font-size: 24px;
-    font-weight: 600;
+    font-weight: 500;
     margin-top: 4px;
 }
 
