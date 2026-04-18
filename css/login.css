@@ -105,7 +105,7 @@
 
 .auth-card h2 {
     margin-bottom: 14px;
-    font-size: 62px;
+    font-size: 50px;
     font-weight: 700;
     line-height: 1.08;
 }
@@ -113,7 +113,7 @@
 .auth-subtext {
     color: #666;
     margin-bottom: 44px;
-    font-size: 24px;
+    font-size: 19px;
 }
 
 .auth-form {
@@ -128,7 +128,7 @@
     font-weight: 600;
     color: var(--primary-1);
     font-family: 'Poppins', sans-serif;
-    font-size: 22px;
+    font-size: 18px;
 }
 
 .auth-field input {
@@ -138,7 +138,7 @@
     background: #fff;
     padding: 18px 22px;
     font-family: 'Open Sans', sans-serif;
-    font-size: 19px;
+    font-size: 16px;
     color: var(--neutral-2);
     outline: none;
     transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
@@ -151,7 +151,7 @@
 }
 
 .auth-inline-link {
-    font-size: 19px;
+    font-size: 16px;
     color: var(--primary-1);
     font-weight: 700;
 }
@@ -173,7 +173,7 @@
     background: transparent;
     color: #666;
     cursor: pointer;
-    font-size: 19px;
+    font-size: 16px;
 }
 
 .auth-options {
@@ -187,7 +187,7 @@
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    font-size: 19px;
+    font-size: 16px;
     color: #5f6b7b;
 }
 
@@ -201,7 +201,7 @@
     width: 100%;
     padding: 18px 24px;
     border-radius: 16px;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 500;
     margin-top: 4px;
 }
@@ -223,7 +223,7 @@
     justify-content: center;
     color: var(--primary-1);
     background: #fff;
-    font-size: 20px;
+    font-size: 18px;
     transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
@@ -236,7 +236,7 @@
 .auth-switch {
     margin-top: 26px;
     color: #666;
-    font-size: 22px;
+    font-size: 18px;
 }
 
 .auth-switch a {
