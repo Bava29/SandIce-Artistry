@@ -529,6 +529,7 @@ a:focus {
 
 .social-icons a:hover {
     background: var(--secondary-1);
+    color: #fff;
 }
 
 /* LINKS */
@@ -8102,6 +8103,17 @@ body.dark-mode a:not(.btn) {
 
 body.dark-mode a:not(.btn):hover {
     color: var(--secondary-1);
+}
+
+/* DARK MODE: keep footer social icons readable on hover */
+body.dark-mode .social-icons a:hover {
+    color: #fff;
+}
+
+/* DARK MODE: keep About team socials readable on hover (avoid global link hover color override) */
+body.dark-mode .artist-socials a:hover,
+body.dark-mode .artist-socials a:focus-visible {
+    color: #fff;
 }
 
 /* DARK MODE: Navbar/menu hover should stay sand-colored */
