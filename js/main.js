@@ -23,15 +23,14 @@ if (prefersRtl) {
 darkToggles.forEach((toggle) => toggle.classList.toggle("active", prefersDark));
 rtlToggles.forEach((toggle) => toggle.classList.toggle("active", prefersRtl));
 
-function runApplyRTL() {
-    if (!document.body) return;
-    if (typeof applyRTL === "function") applyRTL();
-}
-
-if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", runApplyRTL);
-} else {
-    runApplyRTL();
+// Apply RTL text transform on initial load only when RTL preference is enabled.
+// (Avoid running this for every page view when RTL is off to keep it lightweight.)
+if (prefersRtl) {
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", () => applyRTL());
+    } else {
+        applyRTL();
+    }
 }
 
 darkToggles.forEach((button) => {
@@ -47,7 +46,7 @@ rtlToggles.forEach((button) => {
         const isEnabled = document.body.classList.toggle("rtl");
         preferenceStorage?.setItem("sandice-rtl", isEnabled ? "1" : "0");
         rtlToggles.forEach((toggle) => toggle.classList.toggle("active", isEnabled));
-        runApplyRTL();
+        applyRTL();
     });
 });
 
@@ -373,16 +372,110 @@ function applyRTL() {
 }
 
 
-// BUTTON
-const rtlBtn = document.getElementById("rtlToggle");
-
-rtlBtn?.addEventListener("click", () => {
-    document.body.classList.toggle("rtl");
-    applyRTL();
-});
+// NOTE: RTL toggle + initial apply are handled at the top of this file via `rtlToggles`.
 
 
-// LOAD
-window.addEventListener("DOMContentLoaded", () => {
-    applyRTL();
-});
+/////////////////// materials parallax scroll
+const materialParallaxBlocks = document.querySelectorAll(".material-parallax");
+
+if (materialParallaxBlocks.length) {
+    const updateParallax = () => {
+        materialParallaxBlocks.forEach((block) => {
+            const bg = block.querySelector(".parallax-bg");
+            if (!bg) return;
+            const rect = block.getBoundingClientRect();
+            const offset = (rect.top + rect.height / 2 - window.innerHeight / 2) * 0.25;
+            bg.style.transform = `translateY(${offset}px)`;
+        });
+    };
+    window.addEventListener("scroll", updateParallax, { passive: true });
+    updateParallax();
+}
+
+/////////////////// reveal on scroll (all pages)
+function initRevealOnScroll() {
+    const prefersReducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
+
+    const targets = new Set();
+
+    // Manual opt-in (anywhere): data-reveal or .reveal
+    document.querySelectorAll("[data-reveal], .reveal").forEach((el) => {
+        if (el.getAttribute?.("data-reveal") === "off") return;
+        targets.add(el);
+    });
+
+    // Auto: reveal each section's main container (or the section itself if no container)
+    document.querySelectorAll("section").forEach((section) => {
+        if (section.classList.contains("hero-slider")) return; // avoid hiding hero slider on load
+
+        const directChildren = Array.from(section.children || []);
+        const containerChild = directChildren.find((child) => child.classList?.contains("container"));
+
+        if (containerChild) {
+            targets.add(containerChild);
+            return;
+        }
+
+        // Avoid applying transforms to parallax sections, since transforms can break `background-attachment: fixed`
+        // (and can also interfere with other parallax techniques).
+        const isParallaxSection =
+            section.classList.contains("materials-parallax") ||
+            section.classList.contains("event-process-text") ||
+            section.classList.contains("about-parallax") ||
+            section.classList.contains("contact-parallax");
+
+        if (isParallaxSection && directChildren.length) {
+            directChildren.forEach((child) => targets.add(child));
+            return;
+        }
+
+        targets.add(section);
+    });
+
+    // Footer (common on all pages)
+    const footerContainer = document.querySelector(".footer .footer-container");
+    if (footerContainer) targets.add(footerContainer);
+
+    if (!targets.size) return;
+
+    const inViewNow = (el) => {
+        const rect = el.getBoundingClientRect();
+        const viewportH = window.innerHeight || document.documentElement.clientHeight || 0;
+        return rect.bottom > 0 && rect.top < viewportH * 0.9;
+    };
+
+    // Add classes in a way that avoids "flash-hide" for above-the-fold content
+    targets.forEach((el) => {
+        el.classList.add("reveal");
+        if (inViewNow(el)) el.classList.add("is-revealed");
+    });
+
+    if (prefersReducedMotion || !("IntersectionObserver" in window)) {
+        targets.forEach((el) => el.classList.add("is-revealed"));
+        return;
+    }
+
+    const observer = new IntersectionObserver(
+        (entries, obs) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add("is-revealed");
+                obs.unobserve(entry.target);
+            });
+        },
+        {
+            threshold: 0.18,
+            rootMargin: "0px 0px -10% 0px",
+        }
+    );
+
+    targets.forEach((el) => {
+        if (!el.classList.contains("is-revealed")) observer.observe(el);
+    });
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initRevealOnScroll);
+} else {
+    initRevealOnScroll();
+}
