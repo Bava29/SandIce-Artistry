@@ -2269,7 +2269,24 @@ body.dark-mode .noimage-icon {
     padding: 120px 0;
     text-align: center;
     margin-top: 0;
-    background: url("../images/cta-bg.jpg") center/cover no-repeat;
+    background: url("../images/cta2-bg.jpg") center/cover no-repeat;
+}
+
+/* Page-wise CTA backgrounds (each CTA uses a different image) */
+.cta-section.home1-cta {
+    background-image: url("../images/cta-bg.jpg");
+}
+
+.cta-section.home2-cta {
+    background-image: url("../images/cta2-bg.jpg");
+}
+
+.cta-section.about-cta {
+    background-image: url("../images/about-cta-bg.jpg");
+}
+
+.cta-section.packages-cta {
+    background-image: url("../images/packages-cta-bg.jpg");
 }
 
 /* OVERLAY */
@@ -2527,8 +2544,8 @@ body.dark-mode .noimage-icon {
 .packages-pricing {
     padding: 120px 0;
     background: var(--neutral-1);
-    border-top: 1px solid rgba(0, 0, 0, 0.06);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    border-top: 0;
+    border-bottom: 0;
 }
 
 .pricing-category {
@@ -2855,6 +2872,12 @@ body.dark-mode .noimage-icon {
         margin-right: auto;
     }
 
+    .packages-idea-metrics> :last-child {
+        grid-column: 1 / -1;
+        justify-self: center;
+        width: min(260px, 100%);
+    }
+
     .idea-metric {
         width: 100%;
         justify-content: center;
@@ -2886,12 +2909,26 @@ body.dark-mode .noimage-icon {
         max-width: 420px;
     }
 
+    .packages-idea-metrics> :last-child {
+        grid-column: auto;
+        justify-self: stretch;
+        width: 100%;
+    }
+
     .pricing-grid {
         grid-template-columns: 1fr;
     }
 
     .included-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 1024px) {
+    .pricing-grid> :last-child:nth-child(odd) {
+        grid-column: 1 / -1;
+        justify-self: center;
+        width: min(460px, 100%);
     }
 }
 
@@ -3065,6 +3102,9 @@ body.dark-mode .noimage-icon {
         margin-right: auto;
     }
 
+    .signature-meta {
+        justify-content: center;
+    }
 }
 
 @media (max-width: 576px) {
@@ -3240,6 +3280,79 @@ body.dark-mode .signature-chip {
     }
 }
 
+/* ================= TABLET ================= */
+
+@media (max-width: 1024px) {
+
+    .material-parallax {
+        height: 380px;
+        padding: 0 30px;
+    }
+
+    .material-content h2 {
+        font-size: 28px;
+    }
+
+    .material-content p {
+        font-size: 15px;
+    }
+}
+
+
+/* ================= MOBILE FIX ================= */
+
+@media (max-width: 768px) {
+
+    .materials-parallax {
+        flex-direction: column;
+    }
+
+    .material-parallax {
+        width: 100%;
+        height: 100vh !important;
+        /* 🔥 FULL SCREEN */
+        min-height: 500px;
+        justify-content: center !important;
+        padding: 0 25px;
+    }
+
+    .material-parallax.ice {
+        justify-content: center !important;
+    }
+
+    /* PARALLAX IMAGE FIX */
+    .material-parallax .parallax-bg {
+        inset: 0;
+        height: 100%;
+    }
+
+    .material-content {
+        text-align: center;
+    }
+
+    .material-content h2 {
+        font-size: 24px;
+    }
+
+    .material-content p {
+        font-size: 14px;
+    }
+}
+
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width: 480px) {
+
+    .material-content h2 {
+        font-size: 20px;
+    }
+
+    .material-content p {
+        font-size: 13px;
+    }
+}
+
 /****************************filter section**************************/
 
 /* SECTION */
@@ -3351,7 +3464,7 @@ body.dark-mode .signature-chip {
     padding: 120px 0;
     text-align: center;
 
-    background: url("../images/cta-bg.jpg") center/cover no-repeat;
+    background: url("../images/sandice-cta-bg.jpg") center/cover no-repeat;
 }
 
 /* OVERLAY */
@@ -3890,7 +4003,7 @@ body.dark-mode .signature-chip {
     position: relative;
     padding: 120px 0;
     text-align: center;
-    background: url("../images/cta-bg.jpg") center/cover no-repeat;
+    background: url("../images/event-cta-bg.jpg") center/cover no-repeat;
 }
 
 /* OVERLAY */
@@ -4720,10 +4833,29 @@ body.rtl .ticket-form select {
 /* TEXT */
 .ticket-info {
     text-align: center;
+    padding: 26px 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.ticket-info-img {
+    width: 100%;
+    max-width: 290px;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
 }
 
 .ticket-info h3 {
-    margin-bottom: 10px;
+    margin: 0;
+}
+
+.ticket-info p {
+    margin: 0;
 }
 
 .ticket-info span {
@@ -4742,6 +4874,10 @@ body.rtl .ticket-form select {
     .ticket-side {
         padding: 30px;
     }
+
+    .ticket-info-img {
+        max-width: 260px;
+    }
 }
 
 /* ================= FESTIVAL FINAL CTA ================= */
@@ -4750,7 +4886,7 @@ body.rtl .ticket-form select {
     position: relative;
     padding: 120px 0;
     text-align: center;
-    background: url("../images/cta-bg.jpg") center/cover no-repeat;
+    background: url("../images/festival-cta-bg.jpg") center/cover no-repeat;
 }
 
 /* OVERLAY */
@@ -5588,7 +5724,7 @@ body.rtl .material-toggle {
 
 .highlight-story {
     position: relative;
-    height: 550px;
+    height: 470px;
     background: url("../images/beach-festival.jpg") center/cover no-repeat;
     display: flex;
     align-items: center;
@@ -5631,7 +5767,7 @@ body.rtl .material-toggle {
 
     .highlight-story {
         height: auto;
-        padding: 80px 0;
+        padding: 60px 0;
         text-align: center;
     }
 
@@ -5757,17 +5893,14 @@ body.rtl .material-toggle {
 
 /* TRACK */
 .bts-track {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    overflow-x: auto;
-    padding: 10px 20px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    padding: 10px 0;
 }
 
 /* ITEM */
 .bts-item {
-    min-width: 280px;
-    flex-shrink: 0;
     text-align: center;
 }
 
@@ -5787,7 +5920,7 @@ body.rtl .material-toggle {
 }
 
 .bts-item p {
-    font-size: 13px;
+    font-size: 16px;
     color: #555;
 }
 
@@ -5807,8 +5940,13 @@ body.rtl .material-toggle {
         padding: 80px 0;
     }
 
+    .bts-track {
+        grid-template-columns: 1fr;
+        padding: 10px 0;
+    }
+
     .bts-item {
-        min-width: 240px;
+        min-width: 0;
     }
 
     .bts-item img {
@@ -8059,10 +8197,24 @@ body.dark-mode .client-chip {
     }
 }
 
+/* ================= MOBILE HEIGHT FIX ================= */
 
+@media (max-width: 768px) {
 
+    .texture-wrapper {
+        flex-direction: column;
+        height: auto !important;
+        /* IMPORTANT 🔥 */
+    }
 
+    .texture-item {
+        height: 100vh !important;
+        /* force full height */
+        min-height: 500px;
+        /* fallback */
+    }
 
+}
 
 
 /****************************************************dark mode******************************************************/
