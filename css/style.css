@@ -13,6 +13,10 @@
     --secondary-2: #F4E1C1;
     --neutral-1: #FFFFFF;
     --neutral-2: #2B2B2B;
+
+    /* Typography weights */
+    --heading-weight: 600;
+    --subheading-weight: 500;
 }
 
 /* GLOBAL BODY */
@@ -85,7 +89,7 @@ h5,
 h6 {
     font-family: 'Poppins', sans-serif;
     color: var(--primary-1);
-    font-weight: 600;
+    font-weight: var(--heading-weight);
 }
 
 /* FONT SIZES (Global System) */
@@ -117,6 +121,19 @@ h6 {
 p {
     font-size: 16px;
     margin: 10px 0;
+}
+
+/* SECTION SUBHEADING (shared) */
+.section-subheading {
+    font-size: 16px;
+    opacity: 0.85;
+    font-weight: var(--subheading-weight);
+}
+
+/* Subheadings across the site */
+[class$="-header"] p,
+.hero-content p {
+    font-weight: var(--subheading-weight);
 }
 
 /* TYPOGRAPHY CONSISTENCY (P / UL / LI) */
@@ -1228,7 +1245,13 @@ a:focus {
 .testimonial-title {
     text-align: center;
     font-size: 38px;
-    margin-bottom: 50px;
+    margin-bottom: 12px;
+}
+
+.testimonial-subheading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 50px;
 }
 
 /* BOX */
@@ -3672,38 +3695,6 @@ body.dark-mode .signature-chip {
     border-radius: 15px;
 }
 
-.event-gallery-item.stack-2 {
-    display: flex;
-    flex-direction: column;
-}
-
-.event-gallery-item.stack-2 img {
-    height: 50%;
-}
-
-/* PACKAGES: ice2 + ice3 should match normal tile size, with a visible gap */
-.packages-works .event-gallery-item.stack-2 {
-    position: relative;
-}
-
-.packages-works .event-gallery-item.stack-2 img {
-    position: relative;
-    z-index: 1;
-}
-
-.packages-works .event-gallery-item.stack-2::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 50%;
-    height: 14px;
-    transform: translateY(-50%);
-    background: var(--neutral-1);
-    z-index: 2;
-    pointer-events: none;
-}
-
 .event-gallery-item.is-tall {
     grid-row: span 2;
 }
@@ -3819,6 +3810,32 @@ body.dark-mode .signature-chip {
 
     .event-step-text span {
         font-size: 32px;
+    }
+}
+
+@media (max-width: 420px) {
+
+    .event-process-header {
+        margin-bottom: 35px;
+    }
+
+    .event-process-track {
+        flex-direction: column;
+        overflow-x: visible;
+        scroll-snap-type: none;
+        padding: 0 16px;
+        gap: 28px;
+    }
+
+    .event-step-text {
+        min-width: 0;
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+    }
+
+    .event-step-text p {
+        max-width: none;
     }
 }
 
@@ -7322,6 +7339,18 @@ body.dark-mode .client-chip {
 
     .artist-photo img {
         height: 330px;
+        object-position: center top;
+    }
+
+    /* 2nd + 3rd card: give extra headroom so faces don't sit under overlay */
+    .about-team-grid .artist-card:nth-child(2) .artist-photo img,
+    .about-team-grid .artist-card:nth-child(3) .artist-photo img {
+        height: 360px;
+        object-position: center top;
+    }
+
+    .about-team-grid .artist-card:nth-child(3) .artist-photo img {
+        object-position: center -45px;
     }
 
     .artist-overlay {
@@ -8221,17 +8250,28 @@ body.dark-mode .client-chip {
 
 /* DARK MODE */
 body.dark-mode {
-    --neutral-1: #121212;
+    /* Page base */
+    --neutral-1: #000000;
     --neutral-2: #F2F2F2;
-    --secondary-2: #1e1e1e;
+    --secondary-2: #111111;
 
-    --surface-1: #1e1e1e;
-    --surface-2: #161616;
+    /* Surfaces/cards */
+    --surface-1: #111111;
+    --surface-2: #0b0b0b;
     --border-1: rgba(255, 255, 255, 0.14);
     --border-2: rgba(255, 255, 255, 0.2);
     --shadow-1: 0 20px 60px rgba(0, 0, 0, 0.45);
 
     color-scheme: dark;
+}
+
+/* DARK MODE: alternate section backgrounds for contrast */
+body.dark-mode section {
+    background-color: #000 !important;
+}
+
+body.dark-mode section:nth-of-type(even) {
+    background-color: #111 !important;
 }
 
 body.dark-mode,
