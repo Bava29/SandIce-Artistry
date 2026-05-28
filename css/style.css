@@ -7368,6 +7368,18 @@ body.dark-mode .client-chip {
 
     .about-team-grid {
         grid-template-columns: repeat(2, 1fr);
+        margin-top: 18px;
+    }
+
+    .about-team-grid .artist-card,
+    .about-team-grid .artist-photo {
+        height: 100%;
+    }
+
+    .about-team-grid .artist-photo img {
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
     }
 }
 
@@ -7412,6 +7424,11 @@ body.dark-mode .client-chip {
 
     .about-team-grid {
         grid-template-columns: 1fr;
+    }
+
+    .about-team-grid .artist-card,
+    .about-team-grid .artist-photo {
+        height: auto;
     }
 
     .artist-photo img {
