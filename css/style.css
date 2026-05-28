@@ -2310,6 +2310,7 @@ body.dark-mode .noimage-icon {
 
 .cta-section.packages-cta {
     background-image: url("../images/packages-cta-bg.jpg");
+    padding: 90px 0;
 }
 
 /* OVERLAY */
@@ -2450,7 +2451,7 @@ body.dark-mode .noimage-icon {
 
 .packages-section-header {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 34px;
 }
 
 .packages-section-header h2 {
@@ -2465,14 +2466,14 @@ body.dark-mode .noimage-icon {
 
 /* IDEA SECTION */
 .packages-idea {
-    padding: 110px 0;
+    padding: 80px 0;
     background: var(--neutral-1);
 }
 
 .packages-idea-grid {
     display: grid;
     grid-template-columns: 1.05fr 0.95fr;
-    gap: 56px;
+    gap: 42px;
     align-items: center;
 }
 
@@ -2556,7 +2557,7 @@ body.dark-mode .noimage-icon {
 
 .packages-idea-media img {
     width: 100%;
-    height: 520px;
+    height: 460px;
     object-fit: cover;
     border-radius: 22px;
     border: 1px solid rgba(0, 0, 0, 0.06);
@@ -2565,14 +2566,15 @@ body.dark-mode .noimage-icon {
 
 /* PRICING MAIN SECTION */
 .packages-pricing {
-    padding: 120px 0;
+    padding: 85px 0;
     background: var(--neutral-1);
     border-top: 0;
     border-bottom: 0;
 }
 
 .pricing-category {
-    margin-top: 46px;
+    margin-top: 32px;
+    scroll-margin-top: 110px;
 }
 
 .pricing-category-title h3 {
@@ -2693,13 +2695,13 @@ body.dark-mode .noimage-icon {
 
 /* WORKS */
 .packages-works {
-    padding: 120px 0;
+    padding: 85px 0;
     background: var(--neutral-1);
 }
 
 /* INCLUDED */
 .packages-included {
-    padding: 120px 0;
+    padding: 85px 0;
     background: var(--neutral-1);
 }
 
@@ -2749,14 +2751,14 @@ body.dark-mode .noimage-icon {
 
 /* ADD-ONS */
 .packages-addons {
-    padding: 120px 0;
+    padding: 85px 0;
     background: var(--neutral-1);
 }
 
 .addons-grid {
     display: grid;
     grid-template-columns: 1.05fr 0.95fr;
-    gap: 56px;
+    gap: 42px;
     align-items: start;
 }
 
@@ -2793,7 +2795,7 @@ body.dark-mode .noimage-icon {
 
 .addons-media img {
     width: 100%;
-    height: 520px;
+    height: 460px;
     object-fit: cover;
     border-radius: 22px;
     border: 1px solid rgba(0, 0, 0, 0.06);
@@ -2871,10 +2873,29 @@ body.dark-mode .noimage-icon {
 /* RESPONSIVE */
 @media (max-width: 1024px) {
 
+    .packages-page .contact-hero {
+        height: 52vh;
+    }
+
+    .packages-idea,
+    .packages-pricing,
+    .packages-works,
+    .packages-included,
+    .packages-addons,
+    .packages-page .commission-section,
+    .cta-section.packages-cta {
+        padding: 70px 0;
+    }
+
+    .packages-section-header {
+        margin-bottom: 28px;
+    }
+
     .packages-idea-grid,
     .addons-grid {
         grid-template-columns: 1fr;
         text-align: center;
+        gap: 34px;
     }
 
     .packages-idea-text p {
@@ -2914,7 +2935,7 @@ body.dark-mode .noimage-icon {
 
     .packages-idea-media img,
     .addons-media img {
-        height: 420px;
+        height: 380px;
     }
 
     .pricing-grid {
@@ -2927,6 +2948,28 @@ body.dark-mode .noimage-icon {
 }
 
 @media (max-width: 576px) {
+    .packages-page .contact-hero {
+        height: 46vh;
+    }
+
+    .packages-idea,
+    .packages-pricing,
+    .packages-works,
+    .packages-included,
+    .packages-addons,
+    .packages-page .commission-section,
+    .cta-section.packages-cta {
+        padding: 55px 0;
+    }
+
+    .packages-section-header {
+        margin-bottom: 24px;
+    }
+
+    .pricing-category {
+        margin-top: 26px;
+    }
+
     .packages-idea-metrics {
         grid-template-columns: 1fr;
         max-width: 420px;
@@ -2944,6 +2987,34 @@ body.dark-mode .noimage-icon {
 
     .included-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 420px) {
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    .pricing-category-title h3 {
+        font-size: 22px;
+    }
+
+    .pricing-card {
+        padding: 22px 18px;
+    }
+
+    .pricing-card.featured {
+        transform: none;
+    }
+
+    .pricing-price {
+        font-size: 20px;
+    }
+
+    .addon-chip {
+        white-space: normal;
+        max-width: 100%;
     }
 }
 
@@ -5022,6 +5093,10 @@ body.rtl .ticket-form select {
 .commission-section {
     padding: 100px 0;
     background: var(--neutral-1);
+}
+
+.packages-page .commission-section {
+    padding: 80px 0;
 }
 
 /* HEADER */
@@ -7340,8 +7415,13 @@ body.dark-mode .client-chip {
     }
 
     .artist-photo img {
-        height: auto;
-        object-position: center top;
+        height: 320px;
+        object-position: center 15%;
+    }
+
+    /* Fine-tune crops so faces stay visible */
+    .about-team-grid .artist-card:nth-child(2) .artist-photo img {
+        object-position: center 20%;
     }
 
     .artist-overlay {
