@@ -3754,17 +3754,20 @@ body.dark-mode .signature-chip {
     position: relative;
     z-index: 2;
     display: flex;
-    gap: 80px;
-    overflow-x: auto;
+    gap: clamp(20px, 4vw, 80px);
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    overflow: visible;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 0 40px;
-    scroll-snap-type: x mandatory;
 }
 
 /* STEP TEXT */
 .event-step-text {
-    min-width: 280px;
-    flex-shrink: 0;
-    scroll-snap-align: center;
+    flex: 1 1 0;
+    min-width: 0;
+    text-align: center;
 }
 
 /* NUMBER */
@@ -3788,6 +3791,7 @@ body.dark-mode .signature-chip {
     font-size: 14px;
     color: #ddd;
     max-width: 250px;
+    margin: 0 auto;
 }
 
 /* SCROLLBAR HIDE */
@@ -3804,8 +3808,21 @@ body.dark-mode .signature-chip {
     }
 
     .event-process-track {
-        gap: 40px;
+        flex-direction: column;
+        overflow: visible;
         padding: 0 20px;
+        gap: 28px;
+    }
+
+    .event-step-text {
+        min-width: 0;
+        width: 100%;
+        max-width: 420px;
+        margin: 0 auto;
+    }
+
+    .event-step-text p {
+        max-width: none;
     }
 
     .event-step-text span {
@@ -3820,22 +3837,7 @@ body.dark-mode .signature-chip {
     }
 
     .event-process-track {
-        flex-direction: column;
-        overflow-x: visible;
-        scroll-snap-type: none;
         padding: 0 16px;
-        gap: 28px;
-    }
-
-    .event-step-text {
-        min-width: 0;
-        width: 100%;
-        max-width: 360px;
-        margin: 0 auto;
-    }
-
-    .event-step-text p {
-        max-width: none;
     }
 }
 
@@ -7338,23 +7340,13 @@ body.dark-mode .client-chip {
     }
 
     .artist-photo img {
-        height: 330px;
+        height: auto;
         object-position: center top;
-    }
-
-    /* 2nd + 3rd card: give extra headroom so faces don't sit under overlay */
-    .about-team-grid .artist-card:nth-child(2) .artist-photo img,
-    .about-team-grid .artist-card:nth-child(3) .artist-photo img {
-        height: 360px;
-        object-position: center top;
-    }
-
-    .about-team-grid .artist-card:nth-child(3) .artist-photo img {
-        object-position: center -45px;
     }
 
     .artist-overlay {
-        transform: translateY(0);
+        position: static;
+        transform: none;
     }
 
     .about-materials-visual img {
