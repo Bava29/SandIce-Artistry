@@ -2572,6 +2572,11 @@ body.dark-mode .noimage-icon {
     border-bottom: 0;
 }
 
+.packages-page .packages-pricing .container.reveal {
+    opacity: 1;
+    transform: none;
+}
+
 .pricing-category {
     margin-top: 32px;
     scroll-margin-top: 110px;
@@ -2991,6 +2996,7 @@ body.dark-mode .noimage-icon {
 }
 
 @media (max-width: 420px) {
+
     html,
     body {
         overflow-x: hidden;
@@ -3015,6 +3021,63 @@ body.dark-mode .noimage-icon {
     .addon-chip {
         white-space: normal;
         max-width: 100%;
+    }
+
+    .packages-page .contact-hero {
+        height: 42vh;
+    }
+
+    .packages-page .hero-content h1 {
+        font-size: 28px;
+        line-height: 1.1;
+    }
+
+    .packages-page .hero-content p {
+        font-size: 14px;
+        max-width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .packages-section-header h2 {
+        font-size: 28px;
+    }
+
+    .packages-section-header p {
+        padding: 0 10px;
+    }
+
+    .packages-idea-media img,
+    .addons-media img {
+        height: 260px;
+    }
+
+    .packages-idea {
+        padding: 50px 0;
+    }
+
+    .packages-pricing,
+    .packages-works,
+    .packages-included,
+    .packages-addons {
+        padding: 45px 0;
+    }
+
+    .packages-idea-text h2,
+    .addons-text h2 {
+        font-size: 24px;
+    }
+
+    .pricing-card {
+        padding: 18px 16px;
+    }
+
+    .pricing-card h4 {
+        font-size: 18px;
+    }
+
+    .pricing-features {
+        gap: 8px;
     }
 }
 
